@@ -1,25 +1,49 @@
+from re import A
+
+
 print('*****************')
 print('***Calculadora***')
 print('*****************')
 ope = ''
 print('Escola uma das opções para inciar as operações')
-while(ope != 'A'  and ope != 'a' and ope != 'S' and ope != 's' and ope != 'D'  and ope != 'd' and ope != 'M' and ope != 'm'):
+while(ope != 'a' and ope != 's' and ope != 'd' and ope != 'm'):
 	ope = str(input('Digite A = Adição, S = Subtração, D = Divisão, M = Multiplicação: '))
-	if ope == 'A' or ope == 'a':
+	ope = ope.lower()
+	if ope == 'a':
 		n1 = float(input('Digite um numero: '))
 		n2 = float(input('Digite outro numero: '))
-		print (n1 ,'+', n2, '=', n1 + n2)
-	elif ope == 'S' or ope == 's':
+		total = n1 + n2
+		if total % 1 == 0:
+			print (int(total))
+		else: 
+			print (total)
+
+	elif ope == 's':
 		n1 = float(input('Digite um numero: '))
 		n2 = float(input('Digite outro numero: '))
-		print(n1 ,'-', n2, '=', n1 - n2)
-	elif ope == 'D' or ope == 'd':
+		total = n1 - n2
+		if total % 1 == 0:
+			print (int(total))
+		else:
+			print (total) 
+
+	elif ope == 'd':
 		n1 = float(input('Digite um numero: '))
 		n2 = float(input('Digite outro numerlo: '))
-		print(n1 ,'/', n2, '=', n1 / n2)
-	elif ope == 'M' or ope == 'm':
+		total = n1 / n2
+		if total % 1 == 0:
+			print (int(total))
+		else:
+			print (total)
+
+	elif ope == 'm':
 		n1 = float(input('Digite um numero: '))
 		n2 = float(input('Digite outro numero: '))
-		print(n1 ,'*', n2, '=', n1 * n2)
+		total = n1 * n2
+		if total % 1 == 0:
+			print (int(total))
+		else:
+			print (total)
+
 	else:
 		print('Essa não e uma opção valida')
