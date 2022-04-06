@@ -1,6 +1,3 @@
-from re import A
-
-
 print('*****************')
 print('***Calculadora***')
 print('*****************')
